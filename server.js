@@ -1,4 +1,12 @@
 const express = require('express');
+
+const mariadb = require('mariadb');
+const pool = mariadb.createPool({
+  host: process.env.DB_HOST, 
+  user: process.env.DB_USER, 
+  connectionLimit: 5
+});
+
 const app = express();
 const port = 8080;
 
