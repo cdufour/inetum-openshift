@@ -12,4 +12,9 @@ app.get('/square/:n', (req, res) => {
   res.send(`Le carré de ${n} vaut ${n*n}`);
 });
 
+app.get('/cube/:n', (req, res) => {
+  const n = parseInt(req.params.n);
+  res.send(`Le cube de ${n} vaut ${n*n*n}`);
+});
+
 app.listen(port, () => console.log('Serveur écoutant le port ' + port));
