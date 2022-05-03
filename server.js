@@ -43,4 +43,9 @@ app.get('/cube/:n', (req, res) => {
   res.send(`Le cube de ${n} vaut ${n*n*n}`);
 });
 
+app.get('/mariadb', async (req, res) => {
+  await asyncFunction();
+  res.send('Mariadb');
+});
+
 app.listen(port, () => console.log('Serveur écoutant le port ' + port));
