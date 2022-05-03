@@ -29,6 +29,7 @@ app.get('/cube/:n', (req, res) => {
 });
 
 app.get('/mariadb', async (req, res) => {
+  
   let conn;
   try {
     conn = await pool.getConnection();
@@ -40,7 +41,7 @@ app.get('/mariadb', async (req, res) => {
   } finally {
     if (conn) return conn.end();
   }
-}
+
 });
 
 app.listen(port, () => console.log('Serveur écoutant le port ' + port));
