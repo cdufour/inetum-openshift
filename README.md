@@ -1,1 +1,1 @@
-# inetume-openshift
+# inetum-openshift
