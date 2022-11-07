@@ -18,4 +18,8 @@ app.get('/cube/:n', (req, res) => {
   res.send(`Le cube de ${n} vaut ${n*n*n}`);
 });
 
+app.get('/inetum', (req, res) => {
+  res.send('Ô Inetum ! Comme tu es grand !');
+})
+
 app.listen(port, () => console.log('Serveur écoutant le port ' + port));
